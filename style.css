@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(122, 179, 202);
+    height: 80px;
+}
+
+.pic img{
+    width: 70px;
+    padding: 5px 12px;
+}
+
+.navbar{
+    margin-top: 23px;
+}
+.navbar li{
+    display: inline;
+    list-style: none;
+}
+.navbar li a{
+    color: black;
+    text-decoration: none;
+    padding: 25px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 17px;
+}
+
+.navbar li a:hover{
+    color: rgb(127, 59, 204);
+}
+
+.gamecontainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.box{
+    border: 2px solid black;
+    /*font size in vw can make website automatically responsive*/
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(209, 194, 223);
+}
+
+.gameinfo{
+    padding: 0 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.info{
+    font-size: 25px;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease;
+}
+
+.br-0{
+    border-right:0 ;
+}
+
+.bl-0{
+    border-left:0 ;
+}
+
+.bt-0{
+    border-top:0 ;
+}
+
+.bb-0{
+    border-bottom:0 ;
+}
+
+#reset{
+    margin: 14px 23px;
+    padding: 6px 14px;
+    background-color: rgb(211, 198, 208);
+    color: black;
+    cursor: pointer;
+    border-radius: 6px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    
+}
+
+#reset:hover{
+    background-color: rgb(125, 211, 211);
+}
+
+.bottom{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    padding-top: 23px;
+    font-family: 'Montserrat', sans-serif;
+    color: grey;
+    font-weight: bold;
+}
+@media screen and (max-width:800px){
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .gameinfo{
+        margin-top:34px ;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+}
+
+@media screen and(max-width:505px){
+    .gameinfo h1{
+        font-size: 31px;
+    }
+}
